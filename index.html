@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .announcement {
+            background-color: #1abc9c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .video-container iframe {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .prestasi-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .prestasi {
+            background-color: #ffffff;
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .prestasi:hover {
+            background-color: #ddd;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #1abc9c;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Announcement -->
+    <div class="announcement">
+        <p class="text-center text-sm font-medium">
+            34_TOMIFIRDAUS_X RPL 1 
+        </p>
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
+        <!-- Video YouTube -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cUCPY5PdmNA?si=0zALiDe7qGz64Wry" 
+                    title="Relaxing Ghibli Music" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Daftar Prestasi -->
+        <div class="prestasi-container">
+            <a href="Tutorial 1.html" class="prestasi">Tutorial 1</a>
+            <a href="Tutorial 2.html" class="prestasi">Tutorial 2</a>
+            <a href="Tutorial 3.html" class="prestasi">Tutorial 3</a>
+            <a href="Tutorial 4.html" class="prestasi">Tutorial 4</a>
+            <a href="Tutorial 5.html" class="prestasi">Tutorial 5</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p class="text-sm font-medium">
+            TUTORIAL
+        </p>
+    </div>
+
+    <script>
+        document.querySelectorAll(".prestasi").forEach(button => {
+            button.addEventListener("click", () => {
+                alert(button.innerText);
+            });
+        });
+    </script>
+</body>
+</html>
